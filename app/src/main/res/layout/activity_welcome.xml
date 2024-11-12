@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center">
+
+        >
 
         <TextView
             android:id="@+id/welcome_message"
@@ -22,9 +23,10 @@
 
         <Button
             android:id="@+id/logout_button"
-            android:layout_width="wrap_content"
+            android:layout_width="115dp"
             android:layout_height="wrap_content"
-            android:text="Logout" />
+            android:text="Logout"
+            android:layout_marginLeft="55dp"/>
     </LinearLayout>
 
     <!-- RecyclerView to display cricket scores -->
