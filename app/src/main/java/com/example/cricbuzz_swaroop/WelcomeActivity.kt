@@ -3,7 +3,6 @@ package com.example.cricbuzz_swaroop
 import CricketMatch
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,18 +20,6 @@ class WelcomeActivity : AppCompatActivity() {
         val username = intent.getStringExtra("username")
         val welcomeMessage: TextView = findViewById(R.id.welcome_message)
         welcomeMessage.text = "Welcome, $username!"
-
-        // Initialize logout button
-        val logoutButton: Button = findViewById(R.id.logout_button)
-        logoutButton.setOnClickListener {
-            val sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE)
-            val editor = sharedPreferences.edit()
-            editor.putBoolean("isLoggedIn", false)
-            editor.apply()
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
 
         // Initialize RecyclerView
         val recyclerView: RecyclerView = findViewById(R.id.cricket_scores_recycler_view)
@@ -53,25 +40,29 @@ class WelcomeActivity : AppCompatActivity() {
         val adapter = CricketScoresAdapter(cricketMatches)
         recyclerView.adapter = adapter
 
-        // Handle Bottom Navigation Item Clicks
-        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
-        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+        // Bottom Navigation Bar setup
+        setupBottomNavigationBar()
+    }
+
+    private fun setupBottomNavigationBar() {
+        val bottomNavView: BottomNavigationView = findViewById(R.id.bottom_navigation)
+        bottomNavView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {
-                    // Stay in the current activity (Welcome Activity)
-                    return@setOnNavigationItemSelectedListener true
-                }
-                R.id.nav_more -> {
-                    // Navigate to More Activity
-                    val intent = Intent(this, MoreActivity::class.java)
-                    startActivity(intent)
-                    return@setOnNavigationItemSelectedListener true
+                    // Already in Home, do nothing
+                    true
                 }
                 R.id.nav_news -> {
-                    // Navigate to News Activity
                     val intent = Intent(this, NewsActivity::class.java)
                     startActivity(intent)
-                    return@setOnNavigationItemSelectedListener true
+                    finish()
+                    true
+                }
+                R.id.nav_more -> {
+                    val intent = Intent(this, MoreActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                    true
                 }
                 else -> false
             }
