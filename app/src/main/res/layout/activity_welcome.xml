@@ -2,10 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="0dp"
-    android:paddingTop="0dp"
     android:layout_marginTop="0dp">
+
     <!-- Header Section -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,8 +14,7 @@
         android:orientation="horizontal"
         android:gravity="start"
         android:background="@color/my_light_primary"
-        android:padding="10dp"
-        >
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/header_title"
@@ -61,4 +61,11 @@
         android:layout_weight="1"
         android:layout_margin="10dp"/>
 
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu" />
 </LinearLayout>

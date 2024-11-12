@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class WelcomeActivity : AppCompatActivity() {
 
@@ -51,5 +52,29 @@ class WelcomeActivity : AppCompatActivity() {
         // Set up RecyclerView adapter
         val adapter = CricketScoresAdapter(cricketMatches)
         recyclerView.adapter = adapter
+
+        // Handle Bottom Navigation Item Clicks
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
+        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> {
+                    // Stay in the current activity (Welcome Activity)
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.nav_more -> {
+                    // Navigate to More Activity
+                    val intent = Intent(this, MoreActivity::class.java)
+                    startActivity(intent)
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.nav_news -> {
+                    // Navigate to News Activity
+                    val intent = Intent(this, NewsActivity::class.java)
+                    startActivity(intent)
+                    return@setOnNavigationItemSelectedListener true
+                }
+                else -> false
+            }
+        }
     }
 }

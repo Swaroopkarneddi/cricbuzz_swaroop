@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">cricbuzz_swaroop</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_more">More</string>
+    <string name="nav_news">News</string>
 </resources>
