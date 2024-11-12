@@ -7,23 +7,19 @@ import androidx.appcompat.app.AppCompatActivity
 
 class SplashActivity : AppCompatActivity() {
 
-    private lateinit var dbHelper: DBHelper
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-
-        dbHelper = DBHelper(this)
 
         // Wait for 2 seconds before navigating to the main activity or login
         Handler().postDelayed({
             val isLoggedIn = checkIfUserIsLoggedIn()  // Check if the user is logged in
 
             val intent = if (isLoggedIn) {
-                // If logged in, navigate to the main activity
-                Intent(this, MainActivity::class.java)
+                // If logged in, navigate to the WelcomeActivity (instead of MainActivity)
+                Intent(this, WelcomeActivity::class.java)
             } else {
-                // If not logged in, navigate to the login activity
+                // If not logged in, navigate to the LoginActivity
                 Intent(this, LoginActivity::class.java)
             }
             startActivity(intent)
@@ -32,7 +28,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun checkIfUserIsLoggedIn(): Boolean {
-        // You can check login status from SharedPreferences or SQLite
+        // Check login status from SharedPreferences
         val sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE)
         return sharedPreferences.getBoolean("isLoggedIn", false)
     }
