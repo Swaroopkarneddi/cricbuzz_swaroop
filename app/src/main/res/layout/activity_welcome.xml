@@ -3,22 +3,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center">
+    android:padding="16dp">
 
-    <!-- Welcome Message -->
-    <TextView
-        android:id="@+id/welcome_message"
-        android:layout_width="wrap_content"
+    <!-- Horizontal Layout for Welcome Text and Logout Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome, User!"
-        android:textSize="18sp"
-        android:layout_marginBottom="20dp" />
+        android:orientation="horizontal"
+        android:gravity="center">
 
-    <!-- Logout Button -->
-    <Button
-        android:id="@+id/logout_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Logout" />
+        <TextView
+            android:id="@+id/welcome_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome, Username!"
+            android:textSize="18sp"
+            android:layout_marginEnd="16dp"/>
+
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout" />
+    </LinearLayout>
+
+    <!-- RecyclerView to display cricket scores -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cricket_scores_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
 </LinearLayout>
