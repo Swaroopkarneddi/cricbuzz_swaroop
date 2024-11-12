@@ -3,10 +3,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="0dp"
+    android:paddingTop="0dp"
+    android:layout_marginTop="0dp"
+    >
+    <!-- Header Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:background="@color/my_light_primary"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cricbuzz"
+            android:fontFamily="serif-monospace"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
 
     <!-- Username EditText -->
     <EditText
+        android:layout_margin="20dp"
         android:id="@+id/username_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,6 +40,7 @@
 
     <!-- Password EditText -->
     <EditText
+        android:layout_margin="20dp"
         android:id="@+id/password_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,6 +49,7 @@
 
     <!-- Login Button -->
     <Button
+        android:layout_margin="20dp"
         android:id="@+id/login_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,6 +57,7 @@
 
     <!-- Button to navigate to RegisterActivity -->
     <Button
+        android:layout_margin="20dp"
         android:id="@+id/register_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
