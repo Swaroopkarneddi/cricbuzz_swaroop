@@ -3,6 +3,7 @@ package com.example.cricbuzz_swaroop
 import CricketMatch
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -42,6 +43,12 @@ class WelcomeActivity : AppCompatActivity() {
 
         // Bottom Navigation Bar setup
         setupBottomNavigationBar()
+
+        // Handle Logout button click
+        val logoutButton: Button = findViewById(R.id.logout_button)
+        logoutButton.setOnClickListener {
+            handleLogout()
+        }
     }
 
     private fun setupBottomNavigationBar() {
@@ -67,5 +74,18 @@ class WelcomeActivity : AppCompatActivity() {
                 else -> false
             }
         }
+    }
+
+    private fun handleLogout() {
+        // Clear the login state
+        val sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putBoolean("isLoggedIn", false)  // Set login state to false
+        editor.apply()
+
+        // Navigate to LoginActivity
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

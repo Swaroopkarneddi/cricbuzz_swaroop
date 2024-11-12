@@ -17,7 +17,7 @@
             android:exported="false" />
         <activity
             android:name=".MoreActivity"
-            android:exported="false" /> <!-- Splash Screen - launcher activity -->
+            android:exported="false" />
         <activity
             android:name=".SplashActivity"
             android:exported="true"
