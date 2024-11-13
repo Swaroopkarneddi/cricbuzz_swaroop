@@ -4,4 +4,5 @@
     <string name="nav_more">More</string>
     <string name="nav_news">News</string>
     <string name="news_image">News</string>
+    <string name="icon">icn</string>
 </resources>

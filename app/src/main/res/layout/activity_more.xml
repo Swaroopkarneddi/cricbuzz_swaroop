@@ -5,12 +5,13 @@
     android:orientation="vertical">
 
     <!-- Content for More Activity -->
-    <TextView
+    <ListView
+        android:id="@+id/more_list_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="More Content Here"
-        android:textSize="18sp"
-        android:padding="16dp"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"/>
 
     <!-- Include Bottom Navigation Bar -->
     <include layout="@layout/bottom_nav_bar"/>
