@@ -50,12 +50,16 @@
     </LinearLayout>
 
     <!-- RecyclerView to display cricket scores -->
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cricket_scores_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_margin="10dp"/>
+
+
 
     <!-- Include Bottom Navigation Bar -->
     <include layout="@layout/bottom_nav_bar"/>

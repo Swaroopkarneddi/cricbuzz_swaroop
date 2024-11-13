@@ -20,22 +20,49 @@ class WelcomeActivity : AppCompatActivity() {
 
         val username = intent.getStringExtra("username")
         val welcomeMessage: TextView = findViewById(R.id.welcome_message)
-        welcomeMessage.text = "Welcome, $username!"
+//        welcomeMessage.text = "Welcome, $username!"
+        welcomeMessage.text = "Welcome, User"
+
 
         // Initialize RecyclerView
         val recyclerView: RecyclerView = findViewById(R.id.cricket_scores_recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         // Create dummy data
-        val cricketMatches = List(20) { index ->
+//        val cricketMatches = List(20) { index ->
+//            CricketMatch(
+//                team1 = "Team A $index",
+//                team2 = "Team B $index",
+//                team1Score = (100..200).random().toString(),
+//                team2Score = (100..200).random().toString(),
+//                winner = if (index % 2 == 0) "Team A" else "Team B"
+//            )
+//        }
+        val cricketMatches = listOf(
             CricketMatch(
-                team1 = "Team A $index",
-                team2 = "Team B $index",
-                team1Score = (100..200).random().toString(),
-                team2Score = (100..200).random().toString(),
-                winner = if (index % 2 == 0) "Team A" else "Team B"
-            )
-        }
+                team1 = "Team A 1",
+                team2 = "Team B 1",
+                team1Score = "150",
+                team2Score = "145",
+                winner = "Team A 1"
+            ),
+            CricketMatch(
+                team1 = "Team A 2",
+                team2 = "Team B 2",
+                team1Score = "160",
+                team2Score = "155",
+                winner = "Team A 2"
+            ),
+            CricketMatch(
+                team1 = "Team A 3",
+                team2 = "Team B 3",
+                team1Score = "140",
+                team2Score = "150",
+                winner = "Team B 3"
+            ),
+            // Add more CricketMatch instances as needed
+        )
+
 
         // Set up RecyclerView adapter
         val adapter = CricketScoresAdapter(cricketMatches)
