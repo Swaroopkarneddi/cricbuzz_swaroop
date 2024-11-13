@@ -1,6 +1,5 @@
 package com.example.cricbuzz_swaroop
 
-import CricketMatch
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -20,49 +19,82 @@ class WelcomeActivity : AppCompatActivity() {
 
         val username = intent.getStringExtra("username")
         val welcomeMessage: TextView = findViewById(R.id.welcome_message)
-//        welcomeMessage.text = "Welcome, $username!"
         welcomeMessage.text = "Welcome, User"
-
 
         // Initialize RecyclerView
         val recyclerView: RecyclerView = findViewById(R.id.cricket_scores_recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        // Create dummy data
-//        val cricketMatches = List(20) { index ->
-//            CricketMatch(
-//                team1 = "Team A $index",
-//                team2 = "Team B $index",
-//                team1Score = (100..200).random().toString(),
-//                team2Score = (100..200).random().toString(),
-//                winner = if (index % 2 == 0) "Team A" else "Team B"
-//            )
-//        }
+        // Updated list with new data structure
         val cricketMatches = listOf(
             CricketMatch(
-                team1 = "Team A 1",
-                team2 = "Team B 1",
-                team1Score = "150",
-                team2Score = "145",
-                winner = "Team A 1"
+                trophyName = "ICC World Cup",
+                matchName = "Final Match",
+                team1 = "India",
+                team2 = "Australia",
+                team1Score = "250/8",
+                team2Score = "230/10",
+                winner = "India",
+                team1Flag = R.drawable.india_flag,  // Replace with actual flag resource
+                team2Flag = R.drawable.australia_flag // Replace with actual flag resource
             ),
             CricketMatch(
-                team1 = "Team A 2",
-                team2 = "Team B 2",
-                team1Score = "160",
-                team2Score = "155",
-                winner = "Team A 2"
+                trophyName = "T20 World Cup",
+                matchName = "Group Stage",
+                team1 = "England",
+                team2 = "South Africa",
+                team1Score = "180/5",
+                team2Score = "170/8",
+                winner = "England",
+                team1Flag = R.drawable.england_flag,  // Replace with actual flag resource
+                team2Flag = R.drawable.south_africa_flag // Replace with actual flag resource
             ),
             CricketMatch(
-                team1 = "Team A 3",
-                team2 = "Team B 3",
-                team1Score = "140",
-                team2Score = "150",
-                winner = "Team B 3"
+                trophyName = "Asia Cup",
+                matchName = "Quarter Final",
+                team1 = "Sri Lanka",
+                team2 = "Pakistan",
+                team1Score = "160/4",
+                team2Score = "150/7",
+                winner = "Sri Lanka",
+                team1Flag = R.drawable.sri_lanka_flag,  // Replace with actual flag resource
+                team2Flag = R.drawable.pakistan_flag // Replace with actual flag resource
             ),
             // Add more CricketMatch instances as needed
+            CricketMatch(
+                trophyName = "ICC World Cup",
+                matchName = "Final Match",
+                team1 = "India",
+                team2 = "Australia",
+                team1Score = "250/8",
+                team2Score = "230/10",
+                winner = "India",
+                team1Flag = R.drawable.india_flag,  // Replace with actual flag resource
+                team2Flag = R.drawable.australia_flag // Replace with actual flag resource
+            ),
+            CricketMatch(
+                trophyName = "ICC World Cup",
+                matchName = "Final Match",
+                team1 = "India",
+                team2 = "Australia",
+                team1Score = "250/8",
+                team2Score = "230/10",
+                winner = "India",
+                team1Flag = R.drawable.india_flag,  // Replace with actual flag resource
+                team2Flag = R.drawable.australia_flag // Replace with actual flag resource
+            ),
+            CricketMatch(
+                trophyName = "ICC World Cup",
+                matchName = "Final Match",
+                team1 = "India",
+                team2 = "Australia",
+                team1Score = "250/8",
+                team2Score = "230/10",
+                winner = "India",
+                team1Flag = R.drawable.india_flag,  // Replace with actual flag resource
+                team2Flag = R.drawable.australia_flag // Replace with actual flag resource
+            ),
         )
-
 
         // Set up RecyclerView adapter
         val adapter = CricketScoresAdapter(cricketMatches)
