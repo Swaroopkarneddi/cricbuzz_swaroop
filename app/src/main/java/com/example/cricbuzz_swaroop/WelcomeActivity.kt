@@ -97,7 +97,7 @@ class WelcomeActivity : AppCompatActivity() {
         )
 
         // Set up RecyclerView adapter
-        val adapter = CricketScoresAdapter(cricketMatches)
+        val adapter = CricketScoresAdapter(cricketMatches,this)
         recyclerView.adapter = adapter
 
         // Bottom Navigation Bar setup

@@ -1,5 +1,7 @@
 package com.example.cricbuzz_swaroop
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class CricketScoresAdapter(private val cricketMatches: List<CricketMatch>) :
+class CricketScoresAdapter(private val cricketMatches: List<CricketMatch>,private val context: Context) :
     RecyclerView.Adapter<CricketScoresAdapter.CricketMatchViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CricketMatchViewHolder {
@@ -29,6 +31,10 @@ class CricketScoresAdapter(private val cricketMatches: List<CricketMatch>) :
 
         holder.team1Flag.setImageResource(match.team1Flag)  // Set team 1 flag image
         holder.team2Flag.setImageResource(match.team2Flag)  // Set team 2 flag image
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, HelloActivity::class.java)
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {
