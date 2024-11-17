@@ -1,5 +1,6 @@
 package com.example.cricbuzz_swaroop
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,6 +20,16 @@ class NewsAdapter(private val newsList: List<NewsItem>) : RecyclerView.Adapter<N
         holder.image.setImageResource(newsItem.imageResId)
         holder.title.text = newsItem.title
         holder.description.text = newsItem.description
+
+        holder.itemView.setOnClickListener {
+            val context = holder.itemView.context
+            val intent = Intent(context, NewsDetailActivity::class.java).apply {
+                putExtra("newsTitle", newsItem.title)
+                putExtra("newsDescription", newsItem.description)
+                putExtra("newsImageResId", newsItem.imageResId)
+            }
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount() = newsList.size
