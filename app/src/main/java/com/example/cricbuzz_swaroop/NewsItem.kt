@@ -1,3 +1,3 @@
 package com.example.cricbuzz_swaroop
 
-data class NewsItem(val imageResId: Int, val title: String)
+data class NewsItem(val imageResId: Int, val title: String, val description: String)

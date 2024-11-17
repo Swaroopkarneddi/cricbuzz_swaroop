@@ -17,13 +17,15 @@ class NewsAdapter(private val newsList: List<NewsItem>) : RecyclerView.Adapter<N
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
         val newsItem = newsList[position]
         holder.image.setImageResource(newsItem.imageResId)
-        holder.text.text = newsItem.title
+        holder.title.text = newsItem.title
+        holder.description.text = newsItem.description
     }
 
     override fun getItemCount() = newsList.size
 
     class NewsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val image: ImageView = itemView.findViewById(R.id.image)
-        val text: TextView = itemView.findViewById(R.id.text)
+        val title: TextView = itemView.findViewById(R.id.text)
+        val description: TextView = itemView.findViewById(R.id.news_description)
     }
 }

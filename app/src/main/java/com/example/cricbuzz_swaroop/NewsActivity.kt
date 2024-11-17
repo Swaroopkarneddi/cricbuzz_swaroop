@@ -51,17 +51,28 @@ class NewsActivity : AppCompatActivity() {
 
         // Dummy data
         val newsList = listOf(
-            NewsItem(R.drawable.img1, "News Title 1"),
-            NewsItem(R.drawable.img1, "News Title 2"),
-            NewsItem(R.drawable.img1, "News Title 3"),
-            NewsItem(R.drawable.img1, "News Title 4"),
-            NewsItem(R.drawable.img1, "News Title 5"),
-            NewsItem(R.drawable.img1, "News Title 6"),
-            NewsItem(R.drawable.img1, "News Title 7"),
-            NewsItem(R.drawable.img1, "News Title 8"),
-            NewsItem(R.drawable.img1, "News Title 9"),
-            NewsItem(R.drawable.img1, "News Title 10")
-        )
+            NewsItem(R.drawable.img1, "News Title 1", "Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content."),
+            NewsItem(R.drawable.img1, "News Title 1", "Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content."),
+            NewsItem(R.drawable.img1, "News Title 1", "Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content."),
+            NewsItem(R.drawable.img1, "News Title 1", "Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content."),
+            NewsItem(R.drawable.img1, "News Title 1", "Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content."),
+            NewsItem(R.drawable.img1, "News Title 1", "Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content."),
+            NewsItem(R.drawable.img1, "News Title 1", "Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content."),
+            NewsItem(R.drawable.img1, "News Title 1", "Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content."),
+            NewsItem(R.drawable.img1, "News Title 1", "Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content."),
+            NewsItem(R.drawable.img1, "News Title 1", "Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content."),
+            NewsItem(R.drawable.img1, "News Title 1", "Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content."),
+            NewsItem(R.drawable.img1, "News Title 1", "Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content."),
+            NewsItem(R.drawable.img1, "News Title 1", "Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content."),
+            NewsItem(R.drawable.img1, "News Title 1", "Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content."),
+            NewsItem(R.drawable.img1, "News Title 1", "Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content."),
+            NewsItem(R.drawable.img1, "News Title 1", "Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content."),
+            NewsItem(R.drawable.img1, "News Title 1", "Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content."),
+            NewsItem(R.drawable.img1, "News Title 1", "Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content."),
+            NewsItem(R.drawable.img1, "News Title 1", "Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content."),
+            NewsItem(R.drawable.img1, "News Title 1", "Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content.Description for News 1 about cricket. This is dummy content."),
+
+            )
 
         val adapter = NewsAdapter(newsList)
         recyclerView.adapter = adapter
