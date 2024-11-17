@@ -50,22 +50,22 @@ class MoreActivity : AppCompatActivity() {
         moreListView = findViewById(R.id.more_list_view)
 
         val moreItemList = listOf(
-            MoreItem(R.drawable.logo, "Browse Series"),
-            MoreItem(R.drawable.logo, "Browse Teams"),
-            MoreItem(R.drawable.logo, "Browse Players"),
-            MoreItem(R.drawable.logo, "Schedule"),
-            MoreItem(R.drawable.logo, "Archives"),
-            MoreItem(R.drawable.logo, "Photos"),
-            MoreItem(R.drawable.logo, "Quotes"),
-            MoreItem(R.drawable.logo, "ICC Ranking Men"),
-            MoreItem(R.drawable.logo, "ICC Ranking Women"),
-            MoreItem(R.drawable.logo, "Records"),
-            MoreItem(R.drawable.logo, "ICC World Test Championship"),
-            MoreItem(R.drawable.logo, "ICC World Super League"),
-            MoreItem(R.drawable.logo, "Rate the App"),
-            MoreItem(R.drawable.logo, "Feedback"),
-            MoreItem(R.drawable.logo, "Settings"),
-            MoreItem(R.drawable.logo, "About Cricbuzz")
+            MoreItem(R.drawable.brouse_settings, "Browse Series"),
+            MoreItem(R.drawable.br_teams, "Browse Teams"),
+            MoreItem(R.drawable.br_player, "Browse Players"),
+            MoreItem(R.drawable.schedule,"Schedule"),
+            MoreItem(R.drawable.archives, "Archives"),
+            MoreItem(R.drawable.photos_icn, "Photos"),
+            MoreItem(R.drawable.quotes, "Quotes"),
+            MoreItem(R.drawable.men_rank, "ICC Ranking Men"),
+            MoreItem(R.drawable.renking_women, "ICC Ranking Women"),
+            MoreItem(R.drawable.folder, "Records"),
+            MoreItem(R.drawable.league, "ICC World Test Championship"),
+            MoreItem(R.drawable.football_trophy, "ICC World Super League"),
+            MoreItem(R.drawable.review, "Rate the App"),
+            MoreItem(R.drawable.feedback, "Feedback"),
+            MoreItem(R.drawable.settings, "Settings"),
+            MoreItem(R.drawable.about, "About Cricbuzz")
         )
 
         val adapter = MoreAdapter(this, moreItemList)
