@@ -11,6 +11,7 @@
     <color name="my_light_on_background">#000000</color>
     <color name="my_light_surface">#FFFFFF</color>
     <color name="my_light_on_surface">#000000</color>
+    <color name="blue">#1081D3</color>
 
 
 <!--    <color name="my_light_primary">#6200EE</color>-->

@@ -3,13 +3,249 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:padding="16dp">
+    >
 
-    <TextView
-        android:id="@+id/hello_text_view"
-        android:layout_width="wrap_content"
+    <!-- Header Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:background="@color/my_light_primary"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cricbuzz"
+            android:fontFamily="serif-monospace"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Horizontal Layout for Welcome Text and Logout Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:text="Hello" />
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/hello_text_view"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="India Won by 11 runs"
+            android:fontFamily="sans-serif"
+            android:textSize="16sp"
+            android:textColor="@color/blue"
+            android:layout_marginEnd="16dp"/>
+    </LinearLayout>
+
+    <!-- ScrollView to contain the rest of the content, which will be scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+<!--team 1 score-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:background="@color/my_light_primary"
+
+                    >
+                    <TextView
+                        android:id="@+id/team1_score_card_name_Tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:text="India"/>
+                    <TextView
+                        android:id="@+id/team1_score_card_final_header_score_Tv"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:text="219-6(20.0)"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+<!--            team2score-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="1">
+
+                        <!-- Table header row -->
+                        <TableRow>
+                            <TextView
+                                android:text="Player"
+                                android:textStyle="bold"
+                                android:padding="8dp"/>
+                            <TextView
+                                android:text="R"
+                                android:textStyle="bold"
+                                android:padding="8dp"/>
+                            <TextView
+                                android:text="B"
+                                android:textStyle="bold"
+                                android:padding="8dp"/>
+                            <TextView
+                                android:text="4s"
+                                android:textStyle="bold"
+                                android:padding="8dp"/>
+                            <TextView
+                                android:text="6s"
+                                android:textStyle="bold"
+                                android:padding="8dp"/>
+                            <TextView
+                                android:text="SR"
+                                android:textStyle="bold"
+                                android:padding="8dp"/>
+                        </TableRow>
+
+                        <!-- Example player row -->
+                        <TableRow>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="8dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Samson (wk)"
+                                    android:paddingBottom="4dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="b Marco Jansen"
+                                    android:textSize="12sp"
+                                    android:paddingTop="4dp"/>
+                            </LinearLayout>
+                            <TextView
+                                android:text="0"
+                                android:padding="8dp"/>
+                            <TextView
+                                android:text="2"
+                                android:padding="8dp"/>
+                            <TextView
+                                android:text="0"
+                                android:padding="8dp"/>
+                            <TextView
+                                android:text="0"
+                                android:padding="8dp"/>
+                            <TextView
+                                android:text="0"
+                                android:padding="8dp"/>
+                        </TableRow>
+
+                        <!-- Repeat <TableRow> for each player -->
+                        <TableRow>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="8dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Abhishek Sharma"
+                                    android:paddingBottom="4dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="st Klaasen b Maharaj"
+                                    android:textSize="12sp"
+                                    android:paddingTop="4dp"/>
+                            </LinearLayout>
+                            <TextView
+                                android:text="50"
+                                android:padding="8dp"/>
+                            <TextView
+                                android:text="25"
+                                android:padding="8dp"/>
+                            <TextView
+                                android:text="3"
+                                android:padding="8dp"/>
+                            <TextView
+                                android:text="5"
+                                android:padding="8dp"/>
+                            <TextView
+                                android:text="200"
+                                android:padding="8dp"/>
+                        </TableRow>
+
+                        <!-- Add other players similarly -->
+
+                        <!-- Extras row -->
+                        <TableRow>
+                            <TextView
+                                android:text="Extras"
+                                android:padding="8dp"/>
+                            <TextView
+                                android:text="19"
+                                android:padding="8dp"/>
+                            <TextView
+                                android:layout_span="4"
+                                android:padding="8dp"/>
+                        </TableRow>
+
+                        <!-- Total row -->
+                        <TableRow>
+                            <TextView
+                                android:text="Total"
+                                android:textStyle="bold"
+                                android:padding="8dp"/>
+                            <TextView
+                                android:text="219-6 (20.0)"
+                                android:textStyle="bold"
+                                android:padding="8dp"/>
+                            <TextView
+                                android:layout_span="4"
+                                android:padding="8dp"/>
+                        </TableRow>
+
+                    </TableLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <!-- Include Bottom Navigation Bar (fixed at the bottom) -->
+    <include layout="@layout/bottom_nav_bar"/>
+
 </LinearLayout>
