@@ -9,6 +9,21 @@ import androidx.appcompat.app.AppCompatActivity
 
 class LoginActivity : AppCompatActivity() {
 
+    fun checkusername(name:String):Boolean{
+        if (name.isEmpty()){
+            return false
+        }
+
+        return true
+    }
+    fun checkpassword(pass:String):Boolean{
+        if (pass.isEmpty()){
+            return false
+        }
+        return true
+    }
+
+
     private lateinit var dbHelper: DBHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +41,8 @@ class LoginActivity : AppCompatActivity() {
             val username = usernameEditText.text.toString()
             val password = passwordEditText.text.toString()
 
-            if (username.isNotEmpty() && password.isNotEmpty()) {
+//            if (username.isNotEmpty() && password.isNotEmpty()) {
+                if (checkusername(username)&& checkpassword(password)) {
                 val isValidUser = dbHelper.checkUser(username, password)
                 if (isValidUser) {
                     // Save login state
@@ -54,4 +70,6 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+
 }
