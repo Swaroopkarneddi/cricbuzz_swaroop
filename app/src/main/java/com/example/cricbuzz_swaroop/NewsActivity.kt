@@ -51,16 +51,16 @@ class NewsActivity : AppCompatActivity() {
 
         // Dummy data
         val newsList = listOf(
-            NewsItem(R.drawable.img1, "News Title 1", "Description for News Title 1"),
-            NewsItem(R.drawable.img1, "News Title 2", "Description for News Title 2"),
-            NewsItem(R.drawable.img1, "News Title 3", "Description for News Title 3"),
-            NewsItem(R.drawable.img1, "News Title 4", "Description for News Title 4"),
-            NewsItem(R.drawable.img1, "News Title 5", "Description for News Title 5"),
-            NewsItem(R.drawable.img1, "News Title 6", "Description for News Title 6"),
-            NewsItem(R.drawable.img1, "News Title 7", "Description for News Title 7"),
-            NewsItem(R.drawable.img1, "News Title 8", "Description for News Title 8"),
-            NewsItem(R.drawable.img1, "News Title 9", "Description for News Title 9"),
-            NewsItem(R.drawable.img1, "News Title 10", "Description for News Title 10")
+            NewsItem(R.drawable.news_img1, "Hamilton picks five as Heat comfortably overcome Stars", "Meanwhile, rain had the final say in the Sydney derby as both teams split the points"),
+            NewsItem(R.drawable.news_img2, "Padikkal to stay back in Australia; No plans to rush Shami yet", "While Rohit Sharma's participation in Perth seems unlikely, India received a boost as KL Rahul returned to bat in the simulations"),
+            NewsItem(R.drawable.news_img3, "Injured Healy out of WBBL 2024, doubtful for India ODIs", "Australia captain has suffered a knee injury with further assessments needed to ascertain comeback date"),
+            NewsItem(R.drawable.news_img5, "Lewis, Hope star in consolation win", "The duo put on a 136-run opening stand in just 9.1 overs to set up the massive chase of 219"),
+            NewsItem(R.drawable.news_img4, "Gill set to miss Perth Test after injuring his thumb", "India's No. 3 injured his left thumb while taking a catch during a practice game on Saturday"),
+            NewsItem(R.drawable.news_img6, "Ranji Trophy: Shami picks three in Bengal's thrilling win ", "Elsewhere, Mumbai, Saurashtra and Tamil Nadu registered wins"),
+            NewsItem(R.drawable.news_img7, "Johnson 5-fer helps Australia clinch thriller", "The hosts secured a 13-run win to go 2-up in the three-match T20I series against Pakistan"),
+            NewsItem(R.drawable.news_img8, "Penna, McGrath help Strikers snap 5-match losing streak", "Despite being in a tricky situation at 45/4, Penna played a crucial knock of 60 to take the Strikers to a respectable score"),
+            NewsItem(R.drawable.news_img9, "Learnt decision-making under pressure from observing Bumrah - Anshul Kamboj ", "The 23-year-old Haryana pacer became only the third bowler in Ranji Trophy history to achieve the 'Perfect Ten'"),
+            NewsItem(R.drawable.news_img10, "Hard toil in the nets and improved second stint - Kohli's day out at WACA", "Gill, Jaiswal too had decent hits out in the middle, while Bumrah was involved in long chats with Gambhir")
         )
 
         val adapter = NewsAdapter(newsList)
