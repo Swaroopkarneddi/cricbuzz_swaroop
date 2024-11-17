@@ -84,6 +84,63 @@
                         android:textSize="18sp"
                         android:text="219-6(20.0)"/>
                 </LinearLayout>
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:id="@+id/skill1_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Batter"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/bord_runs"
+                        android:layout_width="34dp"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="R"/>
+                    <TextView
+
+                        android:id="@+id/bord_balls"
+                        android:layout_width="34dp"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="B"/>
+                    <TextView
+                        android:id="@+id/bord_fours"
+                        android:layout_width="34dp"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+
+                        android:text="4s"/>
+                    <TextView
+                        android:id="@+id/bord_sixes"
+                        android:layout_width="32dp"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+
+                        android:text="6s"/>
+                    <TextView
+                        android:id="@+id/bord_sr"
+                        android:layout_width="34dp"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text="SR"/>
+
+                </LinearLayout>
 
                 <!-- ListView for team 2 score -->
                 <LinearLayout
