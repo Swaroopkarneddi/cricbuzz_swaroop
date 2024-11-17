@@ -152,10 +152,10 @@
                         android:layout_height="match_parent"
                         android:dividerHeight="0dp"/>
                 </LinearLayout>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="sgdhsddsff"/>
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="sgdhsddsff"/>-->
 
 
             </LinearLayout>
@@ -254,10 +254,10 @@
                         android:layout_height="match_parent"
                         android:dividerHeight="0dp"/>
                 </LinearLayout>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="sgdhsddsff"/>
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="sgdhsddsff"/>-->
 
 
             </LinearLayout>
