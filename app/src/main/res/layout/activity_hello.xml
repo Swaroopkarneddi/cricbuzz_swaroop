@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <!-- Header Section -->
     <LinearLayout
@@ -52,22 +51,21 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
-<!--team 1 score-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- Team 1 Score -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:padding="10dp"
-                    android:background="@color/my_light_primary"
+                    android:background="@color/my_light_primary">
 
-                    >
                     <TextView
                         android:id="@+id/team1_score_card_name_Tv"
                         android:layout_width="wrap_content"
@@ -87,161 +85,74 @@
                         android:text="219-6(20.0)"/>
                 </LinearLayout>
 
+                <!-- ListView for team 2 score -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp">
+                    <ListView
+                        android:id="@+id/team2_score_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:dividerHeight="0dp"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="sgdhsddsff"/>
+
 
             </LinearLayout>
 
-<!--            team2score-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
+                <!-- Team 1 Score -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TableLayout
-                        android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:background="@color/my_light_primary">
+
+                    <TextView
+                        android:id="@+id/team2_score_card_name_Tv"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:stretchColumns="1">
-
-                        <!-- Table header row -->
-                        <TableRow>
-                            <TextView
-                                android:text="Player"
-                                android:textStyle="bold"
-                                android:padding="8dp"/>
-                            <TextView
-                                android:text="R"
-                                android:textStyle="bold"
-                                android:padding="8dp"/>
-                            <TextView
-                                android:text="B"
-                                android:textStyle="bold"
-                                android:padding="8dp"/>
-                            <TextView
-                                android:text="4s"
-                                android:textStyle="bold"
-                                android:padding="8dp"/>
-                            <TextView
-                                android:text="6s"
-                                android:textStyle="bold"
-                                android:padding="8dp"/>
-                            <TextView
-                                android:text="SR"
-                                android:textStyle="bold"
-                                android:padding="8dp"/>
-                        </TableRow>
-
-                        <!-- Example player row -->
-                        <TableRow>
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:padding="8dp">
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Samson (wk)"
-                                    android:paddingBottom="4dp"/>
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="b Marco Jansen"
-                                    android:textSize="12sp"
-                                    android:paddingTop="4dp"/>
-                            </LinearLayout>
-                            <TextView
-                                android:text="0"
-                                android:padding="8dp"/>
-                            <TextView
-                                android:text="2"
-                                android:padding="8dp"/>
-                            <TextView
-                                android:text="0"
-                                android:padding="8dp"/>
-                            <TextView
-                                android:text="0"
-                                android:padding="8dp"/>
-                            <TextView
-                                android:text="0"
-                                android:padding="8dp"/>
-                        </TableRow>
-
-                        <!-- Repeat <TableRow> for each player -->
-                        <TableRow>
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:padding="8dp">
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Abhishek Sharma"
-                                    android:paddingBottom="4dp"/>
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="st Klaasen b Maharaj"
-                                    android:textSize="12sp"
-                                    android:paddingTop="4dp"/>
-                            </LinearLayout>
-                            <TextView
-                                android:text="50"
-                                android:padding="8dp"/>
-                            <TextView
-                                android:text="25"
-                                android:padding="8dp"/>
-                            <TextView
-                                android:text="3"
-                                android:padding="8dp"/>
-                            <TextView
-                                android:text="5"
-                                android:padding="8dp"/>
-                            <TextView
-                                android:text="200"
-                                android:padding="8dp"/>
-                        </TableRow>
-
-                        <!-- Add other players similarly -->
-
-                        <!-- Extras row -->
-                        <TableRow>
-                            <TextView
-                                android:text="Extras"
-                                android:padding="8dp"/>
-                            <TextView
-                                android:text="19"
-                                android:padding="8dp"/>
-                            <TextView
-                                android:layout_span="4"
-                                android:padding="8dp"/>
-                        </TableRow>
-
-                        <!-- Total row -->
-                        <TableRow>
-                            <TextView
-                                android:text="Total"
-                                android:textStyle="bold"
-                                android:padding="8dp"/>
-                            <TextView
-                                android:text="219-6 (20.0)"
-                                android:textStyle="bold"
-                                android:padding="8dp"/>
-                            <TextView
-                                android:layout_span="4"
-                                android:padding="8dp"/>
-                        </TableRow>
-
-                    </TableLayout>
-
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:text="India"/>
+                    <TextView
+                        android:id="@+id/team2_score_card_final_header_score_Tv"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:text="219-6(20.0)"/>
                 </LinearLayout>
+
+                <!-- ListView for team 2 score -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp">
+                    <ListView
+                        android:id="@+id/team22_score_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:dividerHeight="0dp"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="sgdhsddsff"/>
+
+
             </LinearLayout>
-
         </LinearLayout>
-
 
     </ScrollView>
 

@@ -2,6 +2,7 @@ package com.example.cricbuzz_swaroop
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ListView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -16,6 +17,40 @@ class HelloActivity : AppCompatActivity() {
 
         // Bottom Navigation Bar setup
         setupBottomNavigationBar()
+
+        // Sample data
+        val players = listOf(
+            Player("Samson (wk)", "b Marco Jansen", 0, 2, 0, 0, 0f),
+            Player("Abhishek Sharma", "st Klaasen b Maharaj", 50, 25, 3, 5, 200f),
+            Player("Abhishek Sharma", "st Klaasen b Maharaj", 50, 25, 3, 5, 200f),
+            Player("Abhishek Sharma", "st Klaasen b Maharaj", 50, 25, 3, 5, 200f),
+            Player("Abhishek Sharma", "st Klaasen b Maharaj", 50, 25, 3, 5, 200f),
+            Player("Abhishek Sharma", "st Klaasen b Maharaj", 50, 25, 3, 5, 200f),
+            Player("Abhishek Sharma", "st Klaasen b Maharaj", 50, 25, 3, 5, 200f),
+            Player("Abhishek Sharma", "st Klaasen b Maharaj", 50, 25, 3, 5, 200f),
+            Player("Abhishek Sharma", "st Klaasen b Maharaj", 50, 25, 3, 5, 200f),
+
+            // Add more players here
+        )
+        val secondTeamPlayers = listOf(
+            Player("Samson (wk)", "b Marco Jansen", 0, 2, 0, 0, 0f),
+            Player("Abhishek Sharma", "st Klaasen b Maharaj", 50, 25, 3, 5, 200f),
+            Player("Abhishek Sharma", "st Klaasen b Maharaj", 50, 25, 3, 5, 200f),
+            Player("Abhishek Sharma", "st Klaasen b Maharaj", 50, 25, 3, 5, 200f),
+            Player("Abhishek Sharma", "st Klaasen b Maharaj", 50, 25, 3, 5, 200f),
+            Player("Abhishek Sharma", "st Klaasen b Maharaj", 50, 25, 3, 5, 200f)
+
+            // Add more players here
+        )
+
+        // Find ListView and set the adapter
+        val listView: ListView = findViewById(R.id.team2_score_list)
+        val adapter = PlayerAdapter(this, players)
+        listView.adapter = adapter
+
+        val secondListView: ListView = findViewById(R.id.team22_score_list)
+        val secondAdapter = PlayerAdapter(this, secondTeamPlayers)
+        secondListView.adapter = secondAdapter
     }
 
     private fun setupBottomNavigationBar() {
