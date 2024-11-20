@@ -8,6 +8,25 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class RegisterActivity : AppCompatActivity() {
+    fun checkusername(name:String):Boolean{
+        if (name.isEmpty()){
+            return false
+        }
+        if(name.length<4){
+            return false
+        }
+        return true
+    }
+    fun checkpassword(pass:String):Boolean{
+        if (pass.isEmpty()){
+            return false
+        }
+        if (pass.length<6){
+            return false
+        }
+
+        return true
+    }
 
     private lateinit var dbHelper: DBHelper
 
@@ -26,7 +45,7 @@ class RegisterActivity : AppCompatActivity() {
             val username = usernameEditText.text.toString()
             val password = passwordEditText.text.toString()
 
-            if (username.isNotEmpty() && password.isNotEmpty()) {
+            if (checkusername(username)&& checkpassword(password)) {
                 val isInserted = dbHelper.insertUser(username, password)
                 if (isInserted) {
                     Toast.makeText(this, "Registration Successful", Toast.LENGTH_SHORT).show()
