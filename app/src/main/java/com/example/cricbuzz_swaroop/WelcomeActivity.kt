@@ -54,6 +54,18 @@ class WelcomeActivity : AppCompatActivity() {
                 category = "International"
             ),
             CricketMatch(
+                trophyName = "ICC World Cup",
+                matchName = "Quarter Final",
+                team1 = "Australia",
+                team2 = "Pakistan",
+                team1Score = "160/4",
+                team2Score = "150/7",
+                winner = "Australia",
+                team1Flag = R.drawable.australia_flag,
+                team2Flag = R.drawable.pakistan_flag,
+                category = "International"
+            ),
+            CricketMatch(
                 trophyName = "T20 World Cup",
                 matchName = "Group Stage",
                 team1 = "England",
@@ -76,7 +88,19 @@ class WelcomeActivity : AppCompatActivity() {
                 team1Flag = R.drawable.sri_lanka_flag,
                 team2Flag = R.drawable.pakistan_flag,
                 category = "ODI"
-            )
+            ),
+            CricketMatch(
+                trophyName = "World Cup",
+                matchName = "Group Stage",
+                team1 = "England",
+                team2 = "Sri Lanka",
+                team1Score = "180/5",
+                team2Score = "170/8",
+                winner = "England",
+                team1Flag = R.drawable.england_flag,
+                team2Flag = R.drawable.sri_lanka_flag,
+                category = "ODI"
+            ),
         )
 
         val adapter = CricketScoresAdapter(cricketMatches, this)
