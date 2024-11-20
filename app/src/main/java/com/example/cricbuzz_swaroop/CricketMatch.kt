@@ -9,5 +9,7 @@ data class CricketMatch(
     val team2Score: String,
     val winner: String,
     val team1Flag: Int,  // Resource ID for team 1's flag image
-    val team2Flag: Int   // Resource ID for team 2's flag image
+    val team2Flag: Int,  // Resource ID for team 2's flag image
+    val category: String // New field for filtering (e.g., "International", "ODI", "T20")
 )
+

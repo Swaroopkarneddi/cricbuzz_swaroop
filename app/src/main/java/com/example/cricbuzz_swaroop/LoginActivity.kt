@@ -13,7 +13,6 @@ class LoginActivity : AppCompatActivity() {
         if (name.isEmpty()){
             return false
         }
-
         return true
     }
     fun checkpassword(pass:String):Boolean{

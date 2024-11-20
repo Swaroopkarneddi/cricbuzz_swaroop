@@ -9,8 +9,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class CricketScoresAdapter(private val cricketMatches: List<CricketMatch>,private val context: Context) :
-    RecyclerView.Adapter<CricketScoresAdapter.CricketMatchViewHolder>() {
+class CricketScoresAdapter(
+    private val allMatches: List<CricketMatch>, // Original dataset
+    private val context: Context
+) : RecyclerView.Adapter<CricketScoresAdapter.CricketMatchViewHolder>() {
+
+    private val filteredMatches = allMatches.toMutableList() // Mutable list for filtered data
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CricketMatchViewHolder {
         val itemView = LayoutInflater.from(parent.context)
@@ -19,8 +23,7 @@ class CricketScoresAdapter(private val cricketMatches: List<CricketMatch>,privat
     }
 
     override fun onBindViewHolder(holder: CricketMatchViewHolder, position: Int) {
-        val match = cricketMatches[position]
-
+        val match = filteredMatches[position]
         holder.trophyName.text = match.trophyName
         holder.matchName.text = match.matchName
         holder.team1.text = match.team1
@@ -28,9 +31,8 @@ class CricketScoresAdapter(private val cricketMatches: List<CricketMatch>,privat
         holder.team1Score.text = match.team1Score
         holder.team2Score.text = match.team2Score
         holder.winner.text = "${match.winner} won"
-
-        holder.team1Flag.setImageResource(match.team1Flag)  // Set team 1 flag image
-        holder.team2Flag.setImageResource(match.team2Flag)  // Set team 2 flag image
+        holder.team1Flag.setImageResource(match.team1Flag)
+        holder.team2Flag.setImageResource(match.team2Flag)
         holder.itemView.setOnClickListener {
             val intent = Intent(context, HelloActivity::class.java)
             context.startActivity(intent)
@@ -38,7 +40,18 @@ class CricketScoresAdapter(private val cricketMatches: List<CricketMatch>,privat
     }
 
     override fun getItemCount(): Int {
-        return cricketMatches.size
+        return filteredMatches.size
+    }
+
+    // Filter logic
+    fun filter(category: String) {
+        filteredMatches.clear()
+        if (category == "All") {
+            filteredMatches.addAll(allMatches)
+        } else {
+            filteredMatches.addAll(allMatches.filter { it.category == category })
+        }
+        notifyDataSetChanged() // Refresh RecyclerView
     }
 
     inner class CricketMatchViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -53,3 +66,4 @@ class CricketScoresAdapter(private val cricketMatches: List<CricketMatch>,privat
         val team2Flag: ImageView = itemView.findViewById(R.id.team2_flag_image_view)
     }
 }
+
